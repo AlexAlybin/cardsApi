@@ -7,6 +7,8 @@ const addCard = title =>
     title: title
   });
 
+const deleteCard = id => axios.delete(`${URL}/board/${id}`);
+
 const getCardsData = () =>
   axios.get(`${URL}/boards`).then(res => {
     console.log(res.data);
@@ -15,5 +17,6 @@ const getCardsData = () =>
 
 export default {
   addCard,
-  getCardsData
+  getCardsData,
+  deleteCard
 };

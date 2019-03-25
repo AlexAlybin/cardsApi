@@ -1,3 +1,8 @@
+import api from "./api";
+
+const removeCard = (cardItem, id) =>
+  api.deleteCard(id).then(() => cardItem.remove());
+
 const createCard = ({ id, title }) => {
   const cardItem = document.createElement("div");
   cardItem.className = "card-item";
@@ -15,15 +20,17 @@ const createCard = ({ id, title }) => {
 
   const cardHeaderIcon = document.createElement("div");
   cardHeaderIcon.setAttribute("class", "card-header-icon");
-  const deleteCardIcon = document.createElement("img");
-  deleteCardIcon.setAttribute("class", "delete-card-icon");
+  // const deleteCardIcon = document.createElement("img");
+  const deleteCardIcon = document.createElement("button");
+  // deleteCardIcon.setAttribute("class", "delete-card-icon");
   //   deleteCardIcon.setAttribute("src", "images/delete.svg");
   //   deleteCardIcon.setAttribute("alt", "delete-icon");
+  deleteCardIcon.innerText = "Delete";
   cardHeaderIcon.dataset.id = id;
   cardHeaderIcon.appendChild(deleteCardIcon);
-  //   deleteCardIcon.addEventListener("click", function(e) {
-  //     deleteCard(e, card.id);
-  //   });
+  deleteCardIcon.addEventListener("click", () => {
+    removeCard(cardItem, id);
+  });
 
   const cardItemList = document.createElement("ul");
   cardItemList.setAttribute("class", "card-body");
