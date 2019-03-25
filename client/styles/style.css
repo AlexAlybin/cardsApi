@@ -1,0 +1,131 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f4f6;
+}
+
+#main-container {
+  padding-top: 38px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  height: 100%;
+  max-height: 36px;
+  width: 80%;
+  margin-bottom: 62px;
+  padding: 15px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-to-text {
+  /* background-image: url("C:\repositories\tasks-project\tasks-project\client\images\di_to-do-p1.svg"); */
+  background-repeat: no-repeat;
+  background-color: purple;
+  width: 105px;
+  height: 40px;
+}
+
+.header-line {
+  width: 70%;
+  height: 5px;
+  background-color: black;
+  margin: 0 10px;
+}
+
+#cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1180px;
+  justify-content: space-between;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+input:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  min-height: 250px;
+  width: 100%;
+  min-width: 400px;
+  max-width: 550px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 10px 8px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  height: 40px;
+}
+
+.card-header-title {
+  width: 90%;
+}
+
+.card-header-title input {
+  width: 100%;
+  height: 100%;
+}
+
+.card-header-icon {
+  cursor: pointer;
+}
+
+.card-body {
+  background-color: #fff;
+  /* height: 90%; */
+  margin: 5px 5px 0 5px;
+  padding-inline-start: 0;
+}
+
+.card-body > li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0 10px 5px 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card-body-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+/* input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+  } */
+
+.card-footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-top: auto;
+}
+
+#add-card-icon {
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  cursor: pointer;
+}
+
+.checked-text {
+  text-decoration: line-through;
+}
